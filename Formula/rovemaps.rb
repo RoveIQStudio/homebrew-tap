@@ -1,35 +1,35 @@
 class Rovemaps < Formula
   desc "Drive RoveMaps Studio from a terminal: every Studio MCP tool as a command, plus file upload and download."
   homepage "https://github.com/RoveIQStudio/rovemaps-cli"
-  version "0.2.1"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/RoveIQStudio/rovemaps-cli/releases/download/cli/v0.2.1/rovemaps-aarch64-apple-darwin.tar.xz"
-      sha256 "906d4a240b33610a99b4cc3a27fc381dbd125a7aface33f5939063ca6a9986e6"
+      url "https://github.com/RoveIQStudio/rovemaps-cli/releases/download/cli/v0.3.0/rovemaps-aarch64-apple-darwin.tar.xz"
+      sha256 "a08373f4c4248a51823a75dd70cc8000fd205aa77d58767afbc582547b660b64"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/RoveIQStudio/rovemaps-cli/releases/download/cli/v0.2.1/rovemaps-x86_64-apple-darwin.tar.xz"
-      sha256 "5bc855bf4b2ff144a35346dedbe68f1c5e18411ac4e79a2d5e28b21f47c3ec07"
+      url "https://github.com/RoveIQStudio/rovemaps-cli/releases/download/cli/v0.3.0/rovemaps-x86_64-apple-darwin.tar.xz"
+      sha256 "e8d9e0b786d94816c6e498f028cdcc1050d4ddd9cfc422af57b3c3e9e54d3223"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/RoveIQStudio/rovemaps-cli/releases/download/cli/v0.2.1/rovemaps-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "405a3c1148b694f4c6a969560d201dfb4b9350bd000ebd7c82affadf7b79818b"
+      url "https://github.com/RoveIQStudio/rovemaps-cli/releases/download/cli/v0.3.0/rovemaps-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "2ff65cd8ec33344f4ff5fc231a34e2930c162c364b4651ec14b3292c8a3749dd"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/RoveIQStudio/rovemaps-cli/releases/download/cli/v0.2.1/rovemaps-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4648787fb1ec0ee6a12a9cb4f7c72bdb742013a0469367b45069def652dcce06"
+      url "https://github.com/RoveIQStudio/rovemaps-cli/releases/download/cli/v0.3.0/rovemaps-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a48bec20afe7f46f761197e8b828dd33b73727964f06b62cba5374f67e0b2c97"
     end
   end
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin": {},
+    "aarch64-apple-darwin":      {},
     "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin": {},
-    "x86_64-pc-windows-gnu": {},
-    "x86_64-unknown-linux-gnu": {}
-  }
+    "x86_64-apple-darwin":       {},
+    "x86_64-pc-windows-gnu":     {},
+    "x86_64-unknown-linux-gnu":  {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"

@@ -1,25 +1,25 @@
 class Rovemaps < Formula
   desc "Drive RoveMaps Studio from a terminal: every Studio MCP tool as a command, plus file upload and download."
   homepage "https://github.com/RoveIQStudio/rovemaps-cli"
-  version "0.3.0"
+  version "0.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/RoveIQStudio/rovemaps-cli/releases/download/cli/v0.3.0/rovemaps-aarch64-apple-darwin.tar.xz"
-      sha256 "a08373f4c4248a51823a75dd70cc8000fd205aa77d58767afbc582547b660b64"
+      url "https://github.com/RoveIQStudio/rovemaps-cli/releases/download/cli/v0.4.0/rovemaps-aarch64-apple-darwin.tar.xz"
+      sha256 "8c5577f8893778f959f19c249a3a727868b6bc5f949844809730b5e1253c2b2f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/RoveIQStudio/rovemaps-cli/releases/download/cli/v0.3.0/rovemaps-x86_64-apple-darwin.tar.xz"
-      sha256 "e8d9e0b786d94816c6e498f028cdcc1050d4ddd9cfc422af57b3c3e9e54d3223"
+      url "https://github.com/RoveIQStudio/rovemaps-cli/releases/download/cli/v0.4.0/rovemaps-x86_64-apple-darwin.tar.xz"
+      sha256 "6641f49e02121b13b694aa93308047dbda86df94d82b35676ea6abc15674ec5c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/RoveIQStudio/rovemaps-cli/releases/download/cli/v0.3.0/rovemaps-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "2ff65cd8ec33344f4ff5fc231a34e2930c162c364b4651ec14b3292c8a3749dd"
+      url "https://github.com/RoveIQStudio/rovemaps-cli/releases/download/cli/v0.4.0/rovemaps-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "4ac57fd82e271350a0de5241e237b9b6bf8106591c0b2f2601c96e9360e83e5d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/RoveIQStudio/rovemaps-cli/releases/download/cli/v0.3.0/rovemaps-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a48bec20afe7f46f761197e8b828dd33b73727964f06b62cba5374f67e0b2c97"
+      url "https://github.com/RoveIQStudio/rovemaps-cli/releases/download/cli/v0.4.0/rovemaps-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "596530fb9d4edf14bd06735d928bba6721e774dedc1590a3f079ce1dbc7b6ec7"
     end
   end
 
